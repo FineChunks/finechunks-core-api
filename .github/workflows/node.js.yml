@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    name: FineChunks front
+    name: FineChunks Core API
     runs-on: ubuntu-latest
 
     strategy:
