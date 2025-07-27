@@ -26,6 +26,6 @@ export class AuthService {
   async register(user: CreateUserDto) {
     const newUser = await this.userService.create(user);
     const { id, username }: BearerPayloadDto = newUser;
-    return this.jwtService.sign({ id, username });
+    return { token: this.jwtService.sign({ id, username }) };
   }
 }
